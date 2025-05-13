@@ -83,6 +83,10 @@ main section#conehcimentos div.interative-skill .buttons{
     display: flex;
     align-items: flex-end;
 }
+
+main section#conehcimentos div.interative-skill .buttons button:hover{
+    scale: 1.1;
+}
 main section#conehcimentos div.interative-skill .buttons button{
     width: 150px;
     height: 300px;
@@ -94,6 +98,8 @@ main section#conehcimentos div.interative-skill .buttons button{
     justify-content: flex-end;
     overflow: hidden;
     margin: 2px;
+    cursor: pointer;
+    transition: .5s;
 }
 main section#conehcimentos div.interative-skill .buttons button img{
     width: 110%;
@@ -126,3 +132,84 @@ main section#tecnologias div.list-tecnologias div.tecnologia {
 main section#tecnologias div.list-tecnologias div.tecnologia p{
     color: #efefef;
 }
+main section#projects div.info-projects
+{
+    display: flex;
+    padding: 10px;
+    & img {
+        width: 90%;
+        border-radius: 20px;
+    }
+    & div.card-info {
+        background-color: #b3b3b3;
+        position: relative;
+        left: -20%;
+        margin-top:10%;
+        padding: 10px;
+        border-radius: 20px;
+        height: 200px;
+        color: #212338;
+        font-size: 20px;
+        & h1 {
+         color: #212437;   
+        }
+        & a {
+            color: #F24968;
+        }
+    }
+}
+main section#projects div.cont-projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px; 
+    & div.project
+    {
+        
+        background-color: #141522;
+        width: 300px;
+        empty-cells: 1/1;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: calc(20px + 15px);
+        text-align: center;
+        & img {
+            border-radius: 20px;
+        }
+        & p.min-descrition {
+            transition: .5s;
+         
+        }
+        & div.more-info
+        {
+            transition: .5s;
+            margin: -10%;
+            opacity: 0;
+        }
+    }
+    & div.project:hover {
+        & p.min-descrition {
+            transition: .5s;
+            margin: -10%;
+            opacity: 0;
+        }
+        & div.more-info
+        {
+            margin: 0%;
+            opacity:1;
+        }
+    }
+}
+
+.scroll-animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .scroll-animated.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
