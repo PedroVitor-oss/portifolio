@@ -2,6 +2,7 @@ body{
     margin: 0;
     background-color: #23253A;
     color: #f3f3f3;
+
     font-family: Arial, Helvetica, sans-serif;
 }
 b.destaque{
@@ -29,10 +30,12 @@ main section
     min-width:900px;
     max-width: 100vh;
     margin: auto;
+    min-height: 50vh;
 }
 main section#welcome {
     padding: 70px 0;
     display: flex;
+    align-items: center
     ;
 }
 main section#welcome  div.cont-info{
@@ -199,6 +202,60 @@ main section#projects div.cont-projects{
         {
             margin: 0%;
             opacity:1;
+        }
+    }
+}
+section#carreira {
+    & h1 
+    {
+        text-align: center;
+        font-size: 2pc;
+    }
+    & .cont-timeline
+    {
+        & .line::before
+        {
+            content: '';
+            display: block;
+            width: 30px;
+            aspect-ratio: 1/1;
+            background-color: #F24968;
+            border-radius: 50%;
+            transform: translate(-10px,-15px);
+        }
+        & .line::after
+        {
+            content: '';
+            display: block;
+            width: 30px;
+            aspect-ratio: 1/1;
+            background-color: #F24968;
+            border-radius: 50%;
+            transform: translate(-10px,500px);
+        }
+        & .line
+        {
+            position: absolute;
+            left: 50vw;;
+            width: 10px;
+            height: 550px;
+            background-color: #F24968;
+            display: block;
+            margin: auto;
+            transform: translateY(100px);
+        }
+        & .conteudo
+        {
+            height: 100px;
+            background: #575b7e;
+            padding: 10px;
+            border-radius: 10px;
+            width: 400px;
+            margin-bottom: 10%;
+        }
+        & .conteudo.right
+        {
+            margin-left: 60%;
         }
     }
 }
